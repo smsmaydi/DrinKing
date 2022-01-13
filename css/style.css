@@ -1,0 +1,232 @@
+:root{
+  --primary-color:rgb(44, 44, 44);
+  --page-background:#dfcf76;
+  --secondary-color:#d3963a;
+  --light-color:#f3f3f3;
+  --dark-color:#333;
+  --max-width:1100px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Lato',sans-serif;
+  line-height: 1.5;
+  background-color: var(--page-background);
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+ul{
+  list-style: none;
+}
+img{
+  width: 100%;
+  
+  background: center;
+  /* position: relative;
+  top: 20px;
+  left: 20px; */
+
+}
+
+
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Staatliches', cursive;
+  margin-bottom: .55rem;
+  line-height: 1.3;
+}
+p{
+  margin: 0.5rem;
+}
+
+/* HEADER */
+.main-nav{
+  width: 100%;
+  height: 80px;
+  display: block;
+}
+
+.main-nav .container{
+  width: 1000px;
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+  
+}
+
+.logo-container{
+  height: 100%;
+  display: table;
+  float: left;
+}
+.logo-container h1{
+  color: black;
+  height: 100%;
+  display: table-cell;
+  vertical-align: middle;
+  font-family: sans-serif;
+  font-size: 32px;
+  font-weight: 200;
+}
+
+.logo-container h1 span{
+  color: crimson;
+  font-weight: 800;
+}
+
+.ul-p{
+  float: right;
+  height: 100%;
+}
+.ul-p li{
+  height: 100%;
+  display: table;
+  float: left;
+  padding: 20px 20px;
+  
+}
+ .ul-p li a{
+   border: 1px solid #111;
+   border-radius: 5px;
+ }
+
+
+/* BODY */
+.container{
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 2rem;
+  overflow: hidden;
+}
+
+.btn{
+  display: inline-block;
+  border: none;
+  background: var(--secondary-color);
+  color: #111;
+  padding: 0.5rem 1.5rem;
+  
+}
+.card{
+  transform: translateY(-1200px);
+  background-color: #d3963a;
+  width: 220px;
+  height: 270px;
+  border-radius: 15px;
+  animation: cards 0.69s forwards ease-in 0.4s;
+}
+
+#series-cards .card-container img{
+  width: 100%;
+  border-radius: 25px;
+  
+}
+
+
+
+#series-cards .card-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  
+}
+#series-cards .card-container h4{
+  margin-top: 0,5rem;
+  font-size: 18px;
+  
+}
+#series-cards article .btn{
+  display: block;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.btn:hover{
+  background-color: #333;
+  color: #d3963a;
+}
+
+#series-cards .container .card-container img{
+  max-height: 200px;
+  padding: 10px;
+}
+
+#showcase{
+  color: #fff;
+  background-color: #333;
+  padding: 2rem;
+  position: relative;
+}
+#showcase::before{
+  content: '';
+  background: url(/img/pexels-darlene-alderson-7016482.jpg)no-repeat center center/cover;
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+#showcase .showcase-content{
+  display: grid;
+  grid-template-columns: repeat(2,1fr );
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+.showcase-content h2{
+  font-size: 70px;
+}
+img:hover{
+  opacity: 0.8;
+
+}
+
+/* Serien Seiten */
+.container .container-rules{
+  display: flex;
+  border: 1px solid #333;
+  height: 75px;
+  background-color: var(--secondary-color);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.container .serie-name h1{
+  font-family: sans-serif;
+  display: block;
+  font-size:  50px;
+  color: #111;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Keyframes */
+@keyframes cards{
+  to{
+    transform: translateY(0);
+  }
+}
+
+@media(max-width:1000px){
+  #series-cards .card-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    
+  }
+}
